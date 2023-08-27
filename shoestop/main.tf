@@ -86,6 +86,7 @@ output "public_subnet1_id" {
 resource "aws_instance" "PerumalEC2" {
   ami           = "ami-0cf0e376c672104d6"  # Replace with your desired AMI ID
   instance_type = "t2.micro"      # Replace with your desired instance type
+  key_name = "my"
   subnet_id     = aws_subnet.public_subnet_1.id
   tags = {
     Name = "PerumalEC2"
